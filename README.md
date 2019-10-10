@@ -16,8 +16,8 @@ Globally accessible processing context based on async_hooks
 # Usage
 
 ```javascript
-const asyncContext = require("processing-context");
-const defaultContext = asyncContext.defaultContext;
+const processingContext = require("processing-context");
+const defaultContext = processingContext.defaultContext;
 
 /*...*/
 
@@ -26,6 +26,6 @@ const initialValue = 3;
 
 /*...*/
 
-asyncContext.create().set(key, initialValue);
+processingContext.create().set(key, initialValue);
 const updatedValue = await new Promise(resolve => resolve(defaultContext.get(key) + 2));
 ```
