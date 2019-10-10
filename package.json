@@ -1,0 +1,29 @@
+{
+  "name": "processing-context",
+  "version": "1.0.0",
+  "description": "Globally accessible processing context based on async_hooks",
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "jest --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/litichevskiydv/processing-context.git"
+  },
+  "keywords": [
+    "async",
+    "context"
+  ],
+  "author": "Dmitriy Litichevskiy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/litichevskiydv/processing-context/issues"
+  },
+  "homepage": "https://github.com/litichevskiydv/processing-context#readme"
+}
