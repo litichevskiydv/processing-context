@@ -14,6 +14,7 @@ jobs:
       node_js: lts/*
       script: jest --coverage --coverageReporters=text-lcov | coveralls
     - stage: deploy
+      if: branch = master && commit_message !~ /no-deploy/
       node_js: lts/*
       script: skip
       deploy:
@@ -21,5 +22,3 @@ jobs:
         email: litichevskiydv@gmail.com
         api_key:
           secure: NWH/bh+XOKyG+Trqt5yz5y5Fapf+0qd1Ldpa5OQprMcijwD0nmjHebqkelNql2O62GksIso1rIFH+lcWO6wsoGK1KTlCY1fL/IVsuPeTWLIHeIP8lxArgfBN4UDWBseMZOQxm5SFHHW8G1P6XdeE7SfTcRT3Gt4XyAI/QaaG3s7z2+XQn36Oejg9q2A3lBEccnzYOqXTvm+gdgjVROgKrMYnHrFNFaQ9rE+KJ0Wx3xFUf0axjpEduwvxKQrYpLhGkyBcF1srYT9RcGoxs5qy0q/GiIkFY6MdXdyq+3TF/t71G0e3dlCaIprAx+LkNj1SatqfjNwKCBQ/ZKDVybWZiM3DqRVUu7FvJF/SPpgCbSb9D+sGOqzFUS1my+p/S98XR/MoY/9Oi+Mg6h3qPsDgdKnpM+qFA1vx4258ns+aneV+ZBdA2FLjIfnPL+n6OXi7DzhyfbSbpeygD0GCeuVwoiwh/qLfoKkKj5v0haT4mq9iEKr85L32c0Jfdn01te0nxFCsUPTYkTbk6djnG/eS/JcOefxW1NnKYfJs7TqPd5wWpK9It3k2mYteIDdDbsH+EQorwSNYhhncbWQhDCDrRItfYjB6hdkCc6rgF8RteQE5GBkqE6lXN0OJg7TltPQNFiS8K8lQ9wMSIb9nIYV/lfHXt4pnecQLgv7vCiH/E68=
-        on:
-          branch: master
