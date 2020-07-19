@@ -2,6 +2,9 @@
   "name": "processing-context",
   "version": "1.0.0",
   "description": "Globally accessible processing context based on async_hooks",
+  "engines": {
+    "node": ">=8"
+  },
   "main": "./src/index.js",
   "types": "./src/index.d.ts",
   "files": [
